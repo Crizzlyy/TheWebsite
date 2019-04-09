@@ -1,14 +1,15 @@
 <!doctype html>
 <html>
 <head>
-<center>
 <div class="box">
 		<title>Crizzly</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="main.css">
 <body>
-</center>
+<div class="sidebar">
+	Test
+</div>
 </body>
 </head>
 </html>
