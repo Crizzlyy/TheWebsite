@@ -38,6 +38,11 @@
   .sidebar a {font-size: 18px;}
 }
 
+.h1
+{
+  font-family: 'Dosis', sans-serif;
+}
+
 p.nickname
 {
 	font-size: 40px;
