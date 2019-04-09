@@ -9,7 +9,7 @@
 <body>
 	<div class="sidebar">
 	<div class="sidebar-description">
-	<img src="/crizzly.jpg" style="width: 200px; height: 200px;">
+	<img src="/images/crizzly.jpg" style="width: 200px; height: 200px;">
 	<p class="nickname">CRIZZLY</p>
 	<p class="realname">Christoffer Törnroos</p>
 </div>
