@@ -8,20 +8,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="main.css">
 <body>
-		<h1>Crizzly</h1>
-		<h2>Welcome stranger.</h2>
-		<div class="links">
-		<a href="index.html" class="start">Back to home</a>
-		</div>
-		<br>
-		<center><div class="descr">
-		<h1>404 - NOT FOUND</h1>
-		</div>
-		<br>
-		</center>
-				<p class="footer_text">Copyright 2018 - Christoffer Törnroos</p>
-		</div>
-
 </center>
 </body>
 </head>
