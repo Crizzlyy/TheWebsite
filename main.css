@@ -68,3 +68,19 @@ p.realname
 {
   padding-left: 10px;
 }
+
+img.instagram
+{
+    width:400px;
+    height: 250px;
+}
+img.linkedin
+{
+    width:400px;
+    height: 250px;
+}
+img.github
+{
+    width:400px;
+    height: 250px;
+}
