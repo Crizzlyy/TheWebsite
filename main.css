@@ -22,6 +22,12 @@ body {
   .sidebar a {font-size: 18px;}
 }
 
+a.gohome
+{
+  color: #0f67ff;
+  text-decoration: none;
+}
+
 .footer {
   position: absolute;
   right: 0;
@@ -31,7 +37,7 @@ body {
   margin-top: 1em;
   background-color: black;
   color:white;
-  text-align: left;
+  text-align: center;
 }
 
 .footer-text
@@ -64,7 +70,7 @@ body {
 
 .main {
   margin-left: 20px;
-  display:inline-block;
+  display: inline-block;
   padding:0px 30px;
 }
 
@@ -109,7 +115,7 @@ body {
 
 .social
 {
-  padding: 160px 0px 0px 90px;
+  padding: 30px 0px 0px 75px;
   display:flex;
 }
 
@@ -313,19 +319,6 @@ a.front:visited
 a.copyright
 {
   color:#0f67ff;
-}
-
-a:link
-{
-  text-decoration: none;
-}
-a:visited
-{
-  text-decoration: none;
-}
-a:hover
-{
-  text-decoration: none;
 }
 
 
