@@ -69,30 +69,30 @@ p.realname
   padding-left: 10px;
 }
 
-img.instagram
-{
-    width:140px;
-    height: 45px;
-}
-img.linkedin
-{
-    width:140px;
-    height: 45px;
-}
-img.github
-{
-    width:140px;
-    height: 35px;
-
-}
-
 hr
 {
   width: 200px;
-  color: lightgray;
+  border: 0.5px solid #d3d3d3;
 }
 
 .introduction
 {
   padding-left: 75px;
+  width: 200px;
 }
+
+.social
+{
+  padding: 220px 0px 0px 75px;
+}
+
+
+svg:hover {
+     fill: blue;
+    transition: all 0.3s ease;
+    display: inline-block;    
+            -webkit-transition: fill .4s ease;
+        -moz-transition: fill .4s ease;
+        -o-transition: fill .4s ease;
+        transition: fill .4s ease; 
+ }
