@@ -14,7 +14,7 @@ body {
   margin: 0;
   padding-bottom: 6rem;
   min-height: 100%;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Dosis', sans-serif;
 }
 
 @media screen and (max-height: 450px) {
@@ -27,7 +27,6 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  margin-left:350px;
   padding: 1rem;
   margin-top: 1em;
   background-color: black;
@@ -64,9 +63,9 @@ body {
 }
 
 .main {
-  margin-left: 350px; 
-  padding: 0px 30px;
+  margin-left: 20px;
   display:inline-block;
+  padding:0px 30px;
 }
 
  .box
@@ -110,7 +109,7 @@ body {
 
 .social
 {
-  padding: 160px 0px 0px 55px;
+  padding: 160px 0px 0px 90px;
   display:flex;
 }
 
@@ -174,6 +173,7 @@ p.demo_descr
 hr.sidebar-line
 {
   width: 200px;
+  margin-left: 75px;
   border: 0.5px solid #d3d3d3;
 }
 
@@ -242,18 +242,24 @@ hr.front-links
 h1
 {
   font-family: 'Dosis', sans-serif;
+  font-weight: 600;
+}
+
+h2
+{
+  font-family: 'Dosis', sans-serif;
+  font-weight: 600 !important
 }
 
 h3
 {
   font-family: 'Dosis', sans-serif;
-
+  font-weight: 600;
 }
 
 h3:hover
 {
   color:black;
-}
 
  hr
 {
