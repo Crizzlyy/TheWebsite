@@ -49,8 +49,9 @@ p.nickname
 	font-family: 'Dosis', sans-serif;
 	font-weight: 800;
 	color: black;
-	margin-top: 0px;
-	margin-bottom: 0px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+
 }
 p.realname
 {
@@ -69,7 +70,7 @@ p.realname
   padding-left: 10px;
 }
 
-hr
+hr.sidebar-line
 {
   width: 200px;
   border: 0.5px solid #d3d3d3;
@@ -79,13 +80,19 @@ hr
 {
   padding-left: 75px;
   width: 200px;
+  font-family: 'Dosis', sans-serif;
 }
 
 .social
 {
-  padding: 220px 0px 0px 75px;
+  padding: 220px 0px 0px 45px;
+  display:flex;
 }
 
+svg
+{
+  
+}
 
 svg:hover {
      fill: blue;
