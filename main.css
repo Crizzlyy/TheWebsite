@@ -1,6 +1,43 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
 @media screen and (max-height: 450px) {
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin-left:350px;
+  padding: 1rem;
+  margin-top: 1em;
+  background-color: black;
+  color:white;
+  text-align: left;
+}
+
+.footer-text
+{
+  margin-left: 20px;
 }
 
 .sidebar {
@@ -19,16 +56,17 @@
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: #0f67ff;
   display: block;
 }
 .sidebar a:hover {
-  color: #f1f1f1;
+  color: blue;
 }
 
 .main {
   margin-left: 350px; 
   padding: 0px 30px;
+  display:inline-block;
 }
 
  .box
@@ -36,7 +74,14 @@
   background: #fff;
   border-radius: 4px;
   display: inline-block;
+  position: relative;
+}
 
+ .box-nosh
+ {
+  background: #fff;
+  border-radius: 4px;
+  display: inline-block;
   position: relative;
 }
 
@@ -59,7 +104,7 @@
 .introduction
 {
   padding-left: 75px;
-  width: 200px;
+  width: 300px;
   font-family: 'Dosis', sans-serif;
 }
 
@@ -68,6 +113,39 @@
   padding: 160px 0px 0px 55px;
   display:flex;
 }
+
+.thumbnails
+{
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 400px;
+}
+
+.thumbnails:hover
+{
+  border: 1px solid #777;
+}
+
+.thumbnails img
+{
+  width: 100%;
+  height: auto;
+  border-bottom: none;
+}
+
+.desc
+{
+  padding: 15px;
+  text-align: center;
+  font-family: 'Dosis', sans-serif;
+  font-size: 19px;
+}
+
+.thumbs{
+  margin-bottom: 100px;
+}
+
 
 p.nickname
 {
@@ -99,7 +177,14 @@ hr.sidebar-line
   border: 0.5px solid #d3d3d3;
 }
 
-
+hr.front-links
+{
+  width: 100%;
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
 
  img.te
  {
@@ -149,9 +234,25 @@ hr.sidebar-line
         transition: fill .4s ease; 
  }
 
+ svg.lang
+ {
+  margin: 1em;
+ }
+
 h1
 {
   font-family: 'Dosis', sans-serif;
+}
+
+h3
+{
+  font-family: 'Dosis', sans-serif;
+
+}
+
+h3:hover
+{
+  color:black;
 }
 
  hr
@@ -171,17 +272,31 @@ body
 
 p.buttonlink
 {
-  font-family: 'Dosis', sans-serif;
-  font-size: 35px;
-  padding: 0 30px 0 30px;
-  font-style: italic;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 20px;
+  padding: 0 30px 0 0px;
+  font-weight: 600;
 }
+
+p.buttonlink:hover
+{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 25px;
+  padding: 0 30px 0 0px;
+  font-weight: 400;
+  color: #0090ff;
+}
+
+p.front-links-descr
+{
+  width: 250px;
+
+}
+
 a.front:link
 {
   text-decoration: none;
-}
-a.front:link
-{
+  font-weight: 500;
   color:black;
 }
 a.front:visited
@@ -189,14 +304,22 @@ a.front:visited
   color:black;
 }
 
+a.copyright
+{
+  color:#0f67ff;
+}
+
 a:link
 {
-  color:blue;
   text-decoration: none;
 }
 a:visited
 {
-  color:purple;
   text-decoration: none;
 }
+a:hover
+{
+  text-decoration: none;
+}
+
 
