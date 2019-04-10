@@ -1,18 +1,20 @@
-/* The sidebar menu */
-.sidebar {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 350px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background-color: #fcfcfc; /* Black */
-  border-right:1px solid #c9c9c9;
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 20px;
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
 }
 
-/* The navigation menu links */
+.sidebar {
+  height: 100%;
+  width: 350px;
+  position: fixed; 
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fcfcfc;
+  border-right:1px solid #c9c9c9;
+  overflow-x: hidden; 
+  padding-top: 20px;
+}
 .sidebar a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
@@ -20,60 +22,33 @@
   color: #818181;
   display: block;
 }
-
-/* When you mouse over the navigation links, change their color */
 .sidebar a:hover {
   color: #f1f1f1;
 }
 
-/* Style page content */
 .main {
-  margin-left: 350px; /* Same as the width of the sidebar */
+  margin-left: 350px; 
   padding: 0px 30px;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
+ .box
+ {
+  border: 1px solid #eee;
+  border-radius: 5px;
+  border-color: #eee #ddd #bbb;
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 3px;
+  padding: 8px 8px 0;
+  background: #fff;
+  color: #555;
+  position: relative;
+  display: inline-block;
+  height: 110px;
+  justify-content: center;
 }
 
-h1
-{
-  font-family: 'Dosis', sans-serif;
-}
-
-p.nickname
-{
-	font-size: 40px;
-	font-family: 'Dosis', sans-serif;
-	font-weight: 800;
-	color: black;
-	margin-top: 4px;
-	margin-bottom: 4px;
-
-}
-p.realname
-{
-	font-size: 20px;
-	font-family: 'Dosis', sans-serif;
-	color: gray;
-	margin-top:0px;
-}
 .sidebar-description
 {
-	padding: 50px 0px 10px 75px;
-}
-
-.github-card
-{
-  padding-left: 10px;
-}
-
-hr.sidebar-line
-{
-  width: 200px;
-  border: 0.5px solid #d3d3d3;
+  padding: 50px 0px 10px 75px;
 }
 
 .introduction
@@ -85,13 +60,57 @@ hr.sidebar-line
 
 .social
 {
-  padding: 220px 0px 0px 45px;
+  padding: 160px 0px 0px 55px;
   display:flex;
 }
 
-svg
+p.nickname
 {
-  
+  font-size: 40px;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 800;
+  color: black;
+  margin-top: 4px;
+  margin-bottom: 4px;
+
+}
+p.realname
+{
+  font-size: 20px;
+  font-family: 'Dosis', sans-serif;
+  color: gray;
+  margin-top:0px;
+}
+
+hr.sidebar-line
+{
+  width: 200px;
+  border: 0.5px solid #d3d3d3;
+}
+
+
+
+ img.te
+ {
+  max-width:100%;
+  max-height:100%;
+ }
+
+ img.tansku
+ {
+  max-width:100%;
+  max-height:100%;
+ }
+
+ img.mc_tnt
+ {
+  max-width:100%;
+  max-height:100%;
+ }
+
+h1
+{
+  font-family: 'Dosis', sans-serif;
 }
 
 svg:hover {
@@ -103,3 +122,14 @@ svg:hover {
         -o-transition: fill .4s ease;
         transition: fill .4s ease; 
  }
+
+ hr
+{
+  width: 70%;
+  margin-bottom: 20px;
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
