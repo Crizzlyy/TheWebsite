@@ -1,0 +1,95 @@
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+
+var vHord = [];
+var vSord = [];
+var vBeskr = [];
+var vUrspr = [];
+var keyCount;
+
+$.getJSON('https://crizzly.fi/data.json', function(data) {
+        $.each(data.words, function(i,f) {
+        	keyCount = Object.keys(data.words).length;
+        	vHord[i] = f.hord;
+        	vSord[i] = f.sord;
+        	vBeskr[i] = f.beskrivning;
+        	vUrspr[i] = f.ursprung;
+		});
+
+        /*console.log(vHord[0] + ", " + vHord[1]  + ", " + vHord[2]);
+        console.log(vSord[0] + ", " + vSord[1] + ", " + vSord[2]);
+        console.log(vBeskr[0] + ", " + vBeskr[1]+ ", " + vBeskr[2]);
+        console.log(vUrspr[0] + ", " + vUrspr[1] + ", " + vUrspr[2]);*/
+
+});
+
+function createCard(){
+	for(var i=keyCount - 1;i>=0;i--)
+	{
+				/*document.write('<div class="card-header">'+
+				'<div>'+
+				'<div class="item-title"><b>'+ vHord[i] + '</b></div>'+
+				'</div></div>'+
+				'<div class="card-content card-content-padding">'+
+				'<b>'+ vSord[i] +'</b>'+
+				'</div>'+
+				'<div class="card-content card-content-padding">' + vBeskr[i] +
+				'</div>'+
+            	'<div class="card-footer"><b>'+ vUrspr[i] + '</b></div>'+
+          		'</div>');*/
+
+        document.getElementById("createCardsHere").innerHTML += ('<li>' + '<div class="card">' +
+        '<div class="card-header">' + '<div>' + '<div class="item-title"><b>' + vHord[i] + '</b>' + 			'</div>' + '</div>' + '</div>' + '<div class="card-content card-content-padding">' + '<b>' + 			vSord[i] + '</b>' + '</div>' + '<div class="card-content card-content-padding">' + vBeskr[i] + 			'</div>' + '<div class="card-footer">' + '<b>' + vUrspr[i] + '</b>' + '</div>' + '</div>' + 			'</li>');
+
+	/*var div = document.createElement('div');
+	var div2 = document.createElement('div');
+	var div3 = document.createElement('div');
+	var div4 = document.createElement('div');
+	var div5 = document.createElement('div');
+	var div6 = document.createElement('div');
+	var div7 = document.createElement('div');
+
+	div.setAttribute('class', 'card');
+	div2.setAttribute('class', 'card-header');
+	div4.setAttribute('class', 'item-title');
+	div5.setAttribute('class', 'card-content card-content-padding');
+
+	document.getElementByClassName("createCards").appendChild(div);
+	document.getElementByClassName("card").appendChild(div2);
+	document.getElementByClassName("card-header").appendChild(div3);
+	document.getElementByClassName("reference").appendChild(div4);
+	document.getElementByClassName("item-title").appendChild(div5);
+
+	$.text(vHord[i]).appendTo(".item-title");
+
+	document.createElement("<div class=\"card\">");
+	document.createElement("<div class=\"card-header\">");
+	document.createElement("<div class=\"reference\">");
+	document.createElement("<div class=\"item-title\"><b>" + vHord[i] + "<\/b><\/div>");
+	document.createElement("<\/div><\/div>");
+	document.createElement("<div class=\"card-content card-content-padding\">");
+	document.createElement("<b>" + vSord[i] + "<\/b>");
+	document.createElement("<\/div>");
+	document.createElement("<div class=\"card-content card-content-padding\">");
+	document.createElement(vBeskr[i]);
+	document.createElement("<\/div>");
+	document.createElement("<div class=\"card-footer\"><b>" + vUrspr[i] + "<\/b><\/div>");
+	document.createElement("<\/div>");*/
+
+	};
+	
+}
+</script>
+</head>
+<body onload="createCard()">
+<p>skapar du under detta</p>
+<p>skapar du under detta</p>
+<p>skapar du under detta</p>
+<p>skapar du under detta</p>
+<p>skapar du under detta</p>
+
+<div id="createCardsHere"></div>
+</body>
+</html>

@@ -3,6 +3,13 @@ html {
   box-sizing: border-box;
 }
 
+canvas {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
 *,
 *:before,
 *:after {
@@ -87,6 +94,7 @@ a.gohome
   border-radius: 4px;
   display: inline-block;
   position: relative;
+  margin-left: 7px;
 }
 
  .box-nosh
@@ -106,6 +114,10 @@ a.gohome
 .box1:hover
 {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+iframe#ghcard-Crizzlyy-1 {
+  margin-left: 5px;
 }
 
 .sidebar-description
@@ -273,9 +285,9 @@ h3
 h3:hover
 {
   color:black;
+}
 
- hr
-{
+hr {
   width: 70%;
   margin-bottom: 20px;
   border: 0;
@@ -323,3 +335,9 @@ a.front:visited
   color:black;
 }
 
+/* AIRBALLOON */
+
+#dirbutton {
+  background: none;
+  border: none;
+}

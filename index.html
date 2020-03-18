@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-		<title>Crizzly</title>
+		<title>Crizzly.fi - Front page</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -10,18 +10,29 @@
 		<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+        <meta name="apple-mobile-web-app-title" content="Crizzly.fi">
+        <meta name="application-name" content="Crizzly.fi">
+        <meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="theme-color" content="#ffffff">
+<canvas id="canvas"></canvas>
 <body>
 	<!--<div class="sidebar">-->
 <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:350px;" id="mySidebar">
 <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
 						<div class="sidebar-description">
-							<img src="/images/crizzly.jpg" style="width: 200px;">
+							<img src="/images/crizzly2.jpg" style="width: 200px;">
 							<p class="nickname">CRIZZLY</p>
 							<p class="realname">Christoffer Törnroos</p>
 						</div>
 							<hr class="sidebar-line">
 						<div class="introduction">
-							<p>From Finland, 22 years old and I have a passion for code. I started coding and modifying private mods as a hobby for Counter-Strike 1.6 when I was 14 years old. Nowadays I am passionate about web development. </p>
+							<p>From Finland, 23 years old and I have a passion for code. I started coding and modifying private mods as a hobby for Counter-Strike 1.6 when I was 14 years old. Nowadays I am passionate about web development. </p>
 						</div>
 						<div class="social">
 							<a href="https://github.com/Crizzlyy">
@@ -53,12 +64,15 @@
 					<div class="github-card" data-github="Crizzlyy/TheWebsite" data-width="400" data-height="100" data-theme="default"></div>
 					<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
 					<div class="github-card" data-github="Crizzlyy/-Minecraft-TNT-Balloon-Front-end" data-width="400" data-height="100" data-theme="default"></div>
+          <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+          <div class="github-card" data-github="Crizzlyy/GIF-Memory" data-width="400" data-height="100" data-theme="default"></div>
 					<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
 				</div>
 		<h1>demos</h1>
 		<hr align="left">
 				<div class="things">
 					<div class="box box1"><a href="/demo-airship"><img class="mc_tnt" src="/images/mc_tnt.png"/></a></div>
+					<div class="box box1"><a href="/games"><img class="mc_tnt" src="/images/games.png"/></a></div>
 				</div>
 		<h1>administrates</h1>
 		<hr align="left">
@@ -77,6 +91,72 @@ function w3_open() {
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
 }
+
+var toiletPapurRain = {
+  tPHeight: 60,
+  tPWidth: 64,
+  tPs: [],
+  tPImage: 'toiletpaper.png',
+  maxtPs: 8,
+  minScale: 0.4,
+  draw: function() {
+    this.setCanvasSize();
+    this.ctx.clearRect(0, 0, this.w, this.h);
+    for (var i = 0; i < this.tPs.length; i++) {
+      var tP = this.tPs[i];
+      tP.image = new Image();
+      tP.image.style.height = tP.height;
+      tP.image.src = this.tPImage;
+      this.ctx.globalAlpha = tP.opacity;
+      this.ctx.drawImage (tP.image, tP.x, tP.y, tP.width, tP.height);
+    }
+    this.move();
+  },
+  move: function() {
+    for(var b = 0; b < this.tPs.length; b++) {
+      var tP = this.tPs[b];
+      tP.y += tP.ys;
+      if(tP.y > this.h) {
+        tP.x = Math.random() * this.w;
+        tP.y = -1 * this.tPHeight;
+      }
+    }
+  },
+  setCanvasSize: function() {
+    this.canvas.width = window.innerWidth;
+    this.canvas.height = window.innerHeight;
+    this.w = this.canvas.width;
+    this.h = this.canvas.height;
+  },
+  initialize: function() {
+    this.canvas = $('#canvas')[0];
+
+    if(!this.canvas.getContext)
+      return;
+
+    this.setCanvasSize();
+    this.ctx = this.canvas.getContext('2d');
+
+    for(var a = 0; a < this.maxtPs; a++) {
+      var scale = (Math.random() * (1 - this.minScale)) + this.minScale;
+      this.tPs.push({
+        x: Math.random() * this.w,
+        y: Math.random() * this.h,
+        ys: Math.random() + 1,
+        height: scale * this.tPHeight,
+        width: scale * this.tPWidth,
+        opacity: scale
+      });
+    }
+
+    setInterval($.proxy(this.draw, this), 30);
+  }
+};
+
+$(document).ready(function(){
+  toiletPapurRain.initialize();
+});
+
 </script>	
 </body>
 </head>
